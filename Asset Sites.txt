@@ -1,0 +1,10 @@
+music = https://www.videvo.net/sound-effect/we-ak47s-lb-04-hpx/261423/
+
+egg sprite = https://taarna23.itch.io/1000-egg-sprites
+
+crosshair = https://www.kenney.nl/assets/crosshair-pack
+
+
+music = Itch.io account: https://maysama.itch.io/ 
+
+Instagram: @mayragandra 

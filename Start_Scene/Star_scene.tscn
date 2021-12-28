@@ -1,0 +1,214 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Start_Scene/Start_Script.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Char/White.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( -67.0819, -184.246 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Start_Canvas" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Start_Canvas"]
+modulate = Color( 1, 1, 1, 0.592157 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="Start_Canvas"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Start_Canvas/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -131.5
+margin_top = 57.4915
+margin_right = 131.5
+margin_bottom = 142.492
+rect_pivot_offset = Vector2( 131.949, 40.4777 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+text = "Start"
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="Start_Canvas/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -126.565
+margin_top = 301.716
+margin_right = 136.435
+margin_bottom = 386.716
+rect_pivot_offset = Vector2( 131.949, 40.4777 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+text = "Credits"
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Start_Canvas/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -140.0
+margin_top = 180.0
+margin_right = 137.0
+margin_bottom = 265.0
+rect_pivot_offset = Vector2( 131.949, 40.4777 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+disabled = true
+text = "Shop //No Time"
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="Start_Canvas/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -131.5
+margin_top = 424.915
+margin_right = 131.5
+margin_bottom = 509.915
+rect_pivot_offset = Vector2( 131.949, 40.4777 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+text = "Exit"
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="Start_Canvas/Control"]
+margin_left = 109.803
+margin_top = 523.298
+margin_right = 941.803
+margin_bottom = 707.298
+text = " For Windows or Mac Use WASD Keys Or Arrow Keys to Move And
+ Mouse Button To shoot. Don't Forget the space bar, press it to stop player's
+ Movement.
+"
+breakpoint_gutter = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit2" type="TextEdit" parent="Start_Canvas/Control"]
+margin_left = 703.0
+margin_top = 180.0
+margin_right = 1233.0
+margin_bottom = 318.0
+text = "Maintain Social Distance 
+To Burst Eggs. 
+Floating Bullets Can
+ Harm."
+breakpoint_gutter = true
+
+[node name="TextEdit3" type="TextEdit" parent="Start_Canvas/Control"]
+margin_left = -14.9514
+margin_top = 178.168
+margin_right = 367.049
+margin_bottom = 366.168
+text = "For Android or IOs Use Arrow 
+Buttons to move and
+ L Button to fire. 
+R Button To Stop Player's
+Movement."
+breakpoint_gutter = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Start_Canvas/Control/Button" to="Start_Canvas/Control" method="_on_Button_pressed"]
+[connection signal="pressed" from="Start_Canvas/Control/Button4" to="Start_Canvas/Control" method="_on_Button4_pressed"]
+[connection signal="pressed" from="Start_Canvas/Control/Button3" to="Start_Canvas/Control" method="_on_Button3_pressed"]

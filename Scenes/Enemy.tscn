@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Char/Red.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Guns/assaultrifle2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Objects/New Project.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Gun_Sprite.gd" type="Script" id=5]
+
+[sub_resource type="ParticlesMaterial" id=1]
+flag_align_y = true
+flag_rotate_y = true
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 1000.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 1.0
+
+[node name="Enemy" type="KinematicBody2D" groups=[
+"enemy",
+]]
+collision_layer = 9
+collision_mask = 9
+script = ExtResource( 1 )
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 0.280582, -5.05107 )
+scale = Vector2( 1.8, 1.8 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2( 1.33484, 1.33484 )
+polygon = PoolVector2Array( -2.04994, -57.2644, -15.5195, -55.5807, -31.7952, -37.6213, -40.2137, -13.4884, -43.581, 12.8894, -38.53, 36.4612, -18.8869, 51.0532, 3.56236, 54.4205, 26.5728, 44.8796, 38.3587, 25.7978, 41.1649, 5.59345, 34.9913, -23.0293, 26.5728, -40.9887, 15.9095, -52.2133 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
+position = Vector2( -172.647, -34.5839 )
+polygon = PoolVector2Array( 171.932, -16.8558, 149.482, 5.59345, 146.676, 29.1652, 147.799, 58.9104, 172.493, 73.5024, 199.432, 57.7879, 201.677, 33.655, 194.381, 2.22607 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 1.64363, -4.20353 )
+scale = Vector2( 5.7562, 5.7877 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Gun2" type="Sprite" parent="."]
+position = Vector2( 0.381774, 0.72934 )
+scale = Vector2( 0.194893, 0.220401 )
+texture = ExtResource( 3 )
+script = ExtResource( 5 )
+
+[node name="BulletPosition" type="Node2D" parent="Gun2"]
+show_behind_parent = true
+position = Vector2( 299.518, -37.6159 )
+scale = Vector2( 7.18344, 6.35207 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+modulate = Color( 1, 0.996078, 0, 1 )
+scale = Vector2( 0.1, 0.1 )
+emitting = false
+amount = 250
+lifetime = 5.0
+one_shot = true
+speed_scale = 6.0
+process_material = SubResource( 1 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

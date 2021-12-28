@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/UI/arrowUp.png" type="Texture" id=1]
+[ext_resource path="res://Assets/UI/arrowLeft.png" type="Texture" id=2]
+[ext_resource path="res://Assets/UI/arrowRight.png" type="Texture" id=3]
+[ext_resource path="res://Assets/UI/arrowDown.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/UI.gd" type="Script" id=5]
+[ext_resource path="res://Assets/UI/buttonR.png" type="Texture" id=6]
+[ext_resource path="res://Assets/UI/buttonL.png" type="Texture" id=7]
+
+[node name="UI" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Up_touch" type="TouchScreenButton" parent="."]
+position = Vector2( 336, -128 )
+scale = Vector2( 3.5, 3.5 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 4 )
+
+[node name="Left_touch" type="TouchScreenButton" parent="."]
+position = Vector2( 96, 136 )
+scale = Vector2( 3.5, 3.5 )
+normal = ExtResource( 2 )
+
+[node name="Right_touch" type="TouchScreenButton" parent="."]
+position = Vector2( 576, 128 )
+scale = Vector2( 3.5, 3.5 )
+normal = ExtResource( 3 )
+
+[node name="Space_touch" type="TouchScreenButton" parent="."]
+position = Vector2( 3496, 112 )
+scale = Vector2( 3.5, 3.5 )
+normal = ExtResource( 6 )
+
+[node name="Fire_touch" type="TouchScreenButton" parent="."]
+position = Vector2( 3088, 112 )
+scale = Vector2( 3.5, 3.5 )
+normal = ExtResource( 7 )
+
+[connection signal="pressed" from="Up_touch" to="." method="_on_Up_touch_pressed"]
+[connection signal="released" from="Up_touch" to="." method="_on_Up_touch_released"]
+[connection signal="pressed" from="Left_touch" to="." method="_on_Left_touch_pressed"]
+[connection signal="released" from="Left_touch" to="." method="_on_Left_touch_released"]
+[connection signal="pressed" from="Right_touch" to="." method="_on_Right_touch_pressed"]
+[connection signal="released" from="Right_touch" to="." method="_on_Right_touch_released"]
+[connection signal="pressed" from="Space_touch" to="." method="_on_Space_touch_pressed"]
+[connection signal="released" from="Space_touch" to="." method="_on_Space_touch_released"]
+[connection signal="pressed" from="Fire_touch" to="." method="_on_Fire_touch_pressed"]
+[connection signal="released" from="Fire_touch" to="." method="_on_Fire_touch_released"]
